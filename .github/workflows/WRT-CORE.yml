@@ -102,10 +102,10 @@ jobs:
           sed -i 's/.apk/.ipk/g' feeds.conf.default
 
           # GitHub Action 移除国内下载源
-          PROJECT_MIRRORS_FILE="./scripts/projectsmirrors.json"
-          if [ -f "$PROJECT_MIRRORS_FILE" ]; then
-            sed -i '/.cn\//d; /tencent/d; /aliyun/d' "$PROJECT_MIRRORS_FILE"
-          fi
+        #  PROJECT_MIRRORS_FILE="./scripts/projectsmirrors.json"
+         # if [ -f "$PROJECT_MIRRORS_FILE" ]; then
+          #  sed -i '/.cn\//d; /tencent/d; /aliyun/d' "$PROJECT_MIRRORS_FILE"
+        #  fi
       
 # ========== 语言包处理 - 必须在 Clone Code 之后（确保 ./wrt 目录存在）；在 Check Scripts 之前（避免被dos2unix处理） ========== #
 
