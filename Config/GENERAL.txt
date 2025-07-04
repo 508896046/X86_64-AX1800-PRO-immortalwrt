@@ -1,6 +1,19 @@
 #科学插件调整
-CONFIG_PACKAGE_luci-app-homeproxy=y
+#  Passwal
+CONFIG_PACKAGE_luci-app-passwall=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Haproxy=n
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Client=n
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Server=n
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Client=n
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Client=n
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Simple_Obfs=n
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_SingBox=n
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_Plus=n
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Plugin=n
 #增加插件
+CONFIG_PACKAGE_luci-app-frps=y
+CONFIG_PACKAGE_luci-app-frpc=y
+CONFIG_PACKAGE_luci-app-oaf=y
 CONFIG_PACKAGE_luci-app-autoreboot=y
 #CONFIG_PACKAGE_luci-app-gecoosac=y
 #CONFIG_PACKAGE_luci-app-netspeedtest=y
@@ -93,8 +106,19 @@ CONFIG_PACKAGE_sgdisk=y
 #CONFIG_PACKAGE_usbutils=y #若连接了 iOS 设备，usbmuxd 负责管理通信，而 usbutils 可用于验证设备是否被识别
 
 #-----------------以下自行增加的插件及组件-----------------#
+
+CONFIG_PACKAGE_luci-app-apfree-wifidog=y
+CONFIG_PACKAGE_luci-app-timewol=y
+CONFIG_PACKAGE_luci-app-store=y
+CONFIG_PACKAGE_luci-app-ap-modem=y
+CONFIG_PACKAGE_luci-app-easymesh=y
+CONFIG_PACKAGE_luci-app-easytier=y
+CONFIG_PACKAGE_luci-app-tailscale=y
+CONFIG_PACKAGE_luci-app-iptvhelper=y
+CONFIG_PACKAGE_luci-app-quickstart=y
+CONFIG_PACKAGE_quickstart=y
 #zram-swap内存压缩
-CONFIG_PACKAGE_kmod-zram=y
+#CONFIG_PACKAGE_kmod-zram=y
 CONFIG_PACKAGE_zram-swap=y
 #依赖插件及组件
 CONFIG_PACKAGE_fuse-utils=y
@@ -102,7 +126,7 @@ CONFIG_PACKAGE_fuse3-utils=y
 CONFIG_PACKAGE_libfuse1=y
 CONFIG_PACKAGE_libfuse3-3=y
 #动态域名解析
-CONFIG_PACKAGE_luci-app-ddns=y
+#CONFIG_PACKAGE_luci-app-ddns=y
 CONFIG_PACKAGE_luci-app-ddns-go=y
 #微力同步
 #CONFIG_PACKAGE_luci-app-verysync=y
@@ -152,7 +176,7 @@ CONFIG_PACKAGE_luci-app-wifischedule=y
 #阿里云盘webdav
 #CONFIG_PACKAGE_luci-app-aliyundrive-webdav=y
 #docker
-#CONFIG_PACKAGE_luci-app-dockerman=y
+CONFIG_PACKAGE_luci-app-dockerman=y
 #KMS服务器
 CONFIG_PACKAGE_luci-app-vlmcsd=y
 #ZeroTier内网穿透
